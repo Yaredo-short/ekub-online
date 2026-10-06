@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Online Ekub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎡 EKUB</h1>
+
+        <p class="subtitle">
+            Online 5 Person Ekub
+        </p>
+
+        <!-- Join -->
+        <div id="joinBox" class="card">
+
+            <h2>Join Ekub</h2>
+
+            <p>Select your name</p>
+
+            <select id="nameSelect">
+
+                <option value="">
+                    Select your name
+                </option>
+
+                <option>Yared</option>
+                <option>Belayneh</option>
+                <option>Birhan</option>
+                <option>Hailu</option>
+                <option>Temesgen</option>
+
+            </select>
+
+            <button id="joinButton">
+                Join Ekub
+            </button>
+
+            <p id="joinError"></p>
+
+        </div>
+
+        <!-- Main app -->
+        <div id="app" class="hidden">
+
+            <div class="userInfo">
+                You are:
+                <strong id="currentUser"></strong>
+            </div>
+
+            <div class="online">
+                🟢 Online participants:
+                <span id="onlineUsers">0</span>
+            </div>
+
+            <!-- Wheel -->
+
+            <div class="wheel-container">
+
+                <div class="pointer">
+                    ▼
+                </div>
+
+                <canvas
+                    id="wheel"
+                    width="500"
+                    height="500">
+                </canvas>
+
+            </div>
+
+            <button
+                id="spinButton"
+                class="spin">
+                SPIN
+            </button>
+
+            <div class="result">
+
+                <h2 id="resultText">
+                    Ready to spin!
+                </h2>
+
+            </div>
+
+            <!-- Participants -->
+
+            <div class="card">
+
+                <h2>Participants</h2>
+
+                <div id="players"></div>
+
+            </div>
+
+            <!-- History -->
+
+            <div class="card">
+
+                <h2>Ekub History</h2>
+
+                <div id="history">
+                    No spins yet.
+                </div>
+
+            </div>
+
+            <button
+                id="resetButton"
+                class="reset">
+                🔄 New Ekub Cycle
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
