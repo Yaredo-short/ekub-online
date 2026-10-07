@@ -1,1 +1,1 @@
-# ekub-online
+# ekub-online/public
